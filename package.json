@@ -1,5 +1,6 @@
 {
 	"name": "fcc-learn-npm-package-json",
+	"description": "Webapp that teaches people the ability to make meaningful contribution to software project",
 	"author": "Mayank Kothari",
 	"dependencies": {
 		"express": "^4.14.0"
