@@ -1,12 +1,17 @@
 {
 	"name": "fcc-learn-npm-package-json",
-	"keywords": [ "freecodecamp", "learntoprogramme", "words" ],
+	"keywords": [
+		"freecodecamp",
+		"learntoprogramme",
+		"words"
+	],
 	"description": "Webapp that teaches people the ability to make meaningful contribution to software project",
 	"license": "MIT",
 	"version": "1.2.0",
 	"author": "Mayank Kothari",
 	"dependencies": {
-		"express": "^4.14.0"
+		"express": "^4.14.0",
+		"moment": "2.14.0"
 	},
 	"main": "server.js",
 	"scripts": {
