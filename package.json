@@ -1,5 +1,6 @@
 {
 	"name": "fcc-learn-npm-package-json",
+	"keywords": [ "freecodecamp", "learntoprogramme", "words" ],
 	"description": "Webapp that teaches people the ability to make meaningful contribution to software project",
 	"author": "Mayank Kothari",
 	"dependencies": {
