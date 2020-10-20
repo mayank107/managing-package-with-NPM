@@ -56,7 +56,6 @@ app.use(function(err, req, res, next) {
 })
 
 var port = process.env.PORT || 3000;
-  bGround.setupBackgroundApp(app, myApp, __dirname).listen(port, function () {
-    bGround.log('Node is listening on port '+ port + '...')
+bGround.setupBackgroundApp(app, myApp, __dirname).listen(port, function(){
+  bGround.log('Node is listening on port '+ port + '...')
 });
-
