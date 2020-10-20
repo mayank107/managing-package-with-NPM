@@ -24,6 +24,8 @@ if (!process.env.DISABLE_XORIGIN) {
   });
 }
 
+ 
+app.use('/public',express.static(__dirname + "/public"));
 // app.use('/public', express.static(process.cwd() + '/public'));
 
 // app.route('/_api/package.json')
@@ -55,7 +57,7 @@ if (!process.env.DISABLE_XORIGIN) {
 //   }  
 // })
 app.get('/',(req,res)=>{
-  res.sendFile(__dirname + "/views/index.html");
+ res.sendFile(__dirname + "/views/index.html");
 })
 
 var port = process.env.PORT || 3000;
