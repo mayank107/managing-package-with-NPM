@@ -4,13 +4,17 @@ var bGround = require('fcc-express-bground');
 require('dotenv').config();
 // --> 7)  Mount the Logger middleware here
 
+app.use(function(req,res,next){
+console.log(req.method+" "+req.path+"-"+req.ip);
+next();
+});
 
 // --> 11)  Mount the body-parser middleware  here
 
 
 /** 1) Meet the node console. */
 
-console.log("Hello World")
+console.log("Hello world")
 /** 2) A first working Express Server */
 
 
@@ -21,6 +25,7 @@ app.get('/',(req,res)=>{
 
 /** 4) Serve static assets  */
 
+// require('dotenv').config();
 app.use(express.static(__dirname + "/public"));
 app.use('/public',express.static(__dirname + "/public"));
 
@@ -35,7 +40,7 @@ app.use('/public',express.static(__dirname + "/public"));
 /** 6) Use the .env file to configure the app */
 
 app.get("/json",(req,res)=>{
-    var jsonResponse={"message":"HELLO JSON"};
+    var jsonResponse={"message": "Hello json"};
     
     if (process.env.MESSAGE_STYLE==="uppercase"){
         jsonResponse.message=jsonResponse.message.toUpperCase()
