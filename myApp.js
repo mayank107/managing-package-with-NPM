@@ -70,6 +70,10 @@ app.get(
       });
     }
   );
+
+  app.get("/:word/echo",(req,res)=>{
+      res.json({echo: req.params.word})
+  });
 /** 9)  Get input from client - Route parameters */
 
 
