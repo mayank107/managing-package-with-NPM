@@ -4,10 +4,14 @@ var bGround = require('fcc-express-bground');
 require('dotenv').config()
 // --> 7)  Mount the Logger middleware here
 
-app.use(function(req,res,next){
-console.log(req.method+" "+req.path+"-"+req.ip);
-next();
-});
+app.use((req,response,next)=>{
+    var method=req.method;
+    var path=req.path;
+    var ip=req.ip;
+    console.log(method+' '+path+' - '+ip);
+    next();
+  })
+
 
 // --> 11)  Mount the body-parser middleware  here
 
